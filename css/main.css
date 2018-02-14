@@ -1,5 +1,9 @@
-.container {
+.nav {
     padding-top: 150px;
+}
+
+#cesar, #second {
+    padding-top: 75px;
 }
 
 #test5 {

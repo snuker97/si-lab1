@@ -11,15 +11,18 @@
 </head>
 
 <body>
+<!-- NAV -->
+<div class="row nav">
+    <div class="container">
+        <a class="waves-effect waves-light btn-large col s2 offset-s2">Criptul lui Cesar</a>
+        <a class="waves-effect waves-light btn-large col s2">Al doilea algoritm</a>
+        <a class="waves-effect waves-light btn-large col s2">Criptul lui Cesar</a>
+        <a class="waves-effect waves-light btn-large col s2">Criptul lui Cesar</a>
+    </div>
+</div>
 <!-- CESAR -->
 <div id="cesar">
     <div class="container">
-        <div class="row" style="margin-bottom: 100px">
-            <a class="waves-effect waves-light btn-large col s2 offset-s2">Criptul lui Cesar</a>
-            <a class="waves-effect waves-light btn-large col s2">Criptul lui Cesar</a>
-            <a class="waves-effect waves-light btn-large col s2">Criptul lui Cesar</a>
-            <a class="waves-effect waves-light btn-large col s2">Criptul lui Cesar</a>
-        </div>
 
         <div class="row">
             <div class="input-field col s8 offset-s2">
@@ -54,6 +57,12 @@
     </div>
 </div>
 
+<div id="second">
+    <div class="container">
+        <h1 class="col s8 offset-s2">Hello there</h1>
+    </div>
+</div>
+
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -71,6 +80,10 @@
     let cesar = document.createElement('SCRIPT');
     cesar.src = 'js/cesar.js';
     document.getElementsByTagName('body')[0].appendChild(cesar);
+
+    let second = document.createElement('SCRIPT');
+    second.src = 'js/second.js';
+    document.getElementsByTagName('body')[0].appendChild(second);
 </script>
 
 <!-- Crypt -->
