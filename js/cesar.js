@@ -6,9 +6,7 @@ let shift = 13;
 document.getElementsByClassName('value')[0].textContent = 13;
 
 document.getElementById('user-text').addEventListener('keyup', () => {
-
     cryptMsg();
-
 });
 
 document.getElementsByTagName('span')[2].addEventListener('click', () => {
