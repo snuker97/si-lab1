@@ -3,6 +3,7 @@ let userText;
 let direction = 0; // 1 Stanga | 0 Dreapta
 
 let shift = 13;
+document.getElementsByClassName('value')[0].textContent = 13;
 
 document.getElementById('user-text').addEventListener('keyup', () => {
 
@@ -13,7 +14,6 @@ document.getElementById('user-text').addEventListener('keyup', () => {
 document.getElementsByTagName('span')[2].addEventListener('click', () => {
     direction = 1;
     shift = 26 - +(document.getElementsByClassName('value')[0].textContent);
-    console.log('stanga');
 
     cryptMsg();
 });
@@ -21,17 +21,16 @@ document.getElementsByTagName('span')[2].addEventListener('click', () => {
 document.getElementsByTagName('span')[3].addEventListener('click', () => {
     direction = 0;
     shift = +(document.getElementsByClassName('value')[0].textContent);
-    console.log('dreapta');
 
     cryptMsg();
 });
 
 document.getElementById('test5').addEventListener('mouseup', () => {
     shift = +(document.getElementsByClassName('value')[0].textContent);
+
     if (direction) {
         shift = 26 - shift;
     }
-    console.log(shift);
 
     cryptMsg();
 });
