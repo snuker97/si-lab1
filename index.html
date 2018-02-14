@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/main.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="input-field col s8 offset-s2">
+            <input id="user-text" type="text" class="validate"  style="text-transform: uppercase">
+            <label for="user-text">Introduceti mesajul pe care doriti sa-l criptati</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s4 offset-s2">
+            <select id="select">
+                <option value="" disabled selected>Alegeti directia shift-ului</option>
+                <option id="stanga" value="Stanga">Stanga</option>
+                <option id="dreapta" value="Dreapta">Dreapta</option>
+            </select>
+            <label>Directia shift-ului</label>
+        </div>
+        <form action="#" class="col s4">
+            <p class="range-field" style="margin-top: 0">
+                <label for="test5">Marimea shift-ului</label>
+                <input type="range" id="test5" min="0" max="26" default="0"/>
+            </p>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s8 offset-s2">
+            <input disabled value="" id="disabled" type="text" class="validate">
+            <label for="disabled">Mesajul criptat</label>
+        </div>
+    </div>
+</div>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<!-- Form init -->
+<script>
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+
+    let newScript = document.createElement('SCRIPT');
+    newScript.src = 'js/cesar.js';
+    document.getElementsByTagName('body')[0].appendChild(newScript);
+</script>
+
+<!-- Crypt -->
+<!--<script src="js/cesar.js"></script>-->
+</body>
+</html>
