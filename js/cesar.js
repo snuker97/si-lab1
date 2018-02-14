@@ -5,8 +5,39 @@ let direction = 0; // 1 Stanga | 0 Dreapta
 let shift = 13;
 
 document.getElementById('user-text').addEventListener('keyup', () => {
-    userText = document.getElementById('user-text').value.toUpperCase();
 
+    cryptMsg();
+
+});
+
+document.getElementsByTagName('span')[2].addEventListener('click', () => {
+    direction = 1;
+    shift = 26 - +(document.getElementsByClassName('value')[0].textContent);
+    console.log('stanga');
+
+    cryptMsg();
+});
+
+document.getElementsByTagName('span')[3].addEventListener('click', () => {
+    direction = 0;
+    shift = +(document.getElementsByClassName('value')[0].textContent);
+    console.log('dreapta');
+
+    cryptMsg();
+});
+
+document.getElementById('test5').addEventListener('mouseup', () => {
+    shift = +(document.getElementsByClassName('value')[0].textContent);
+    if (direction) {
+        shift = 26 - shift;
+    }
+    console.log(shift);
+
+    cryptMsg();
+});
+
+const cryptMsg = () => {
+    userText = document.getElementById('user-text').value.toUpperCase();
     let userTextChar = [];
     let outputText = '';
 
@@ -32,28 +63,7 @@ document.getElementById('user-text').addEventListener('keyup', () => {
         document.getElementsByTagName('label')[3].classList.remove('active');
         document.getElementById('disabled').value = '';
     }
-
-});
-
-document.getElementsByTagName('span')[2].addEventListener('click', () => {
-    direction = 1;
-    shift = 26 - +(document.getElementsByClassName('value')[0].textContent);
-    console.log('stanga');
-});
-
-document.getElementsByTagName('span')[3].addEventListener('click', () => {
-    direction = 0;
-    shift = +(document.getElementsByClassName('value')[0].textContent);
-    console.log('dreapta');
-});
-
-document.getElementById('test5').addEventListener('mouseup', () => {
-    shift = +(document.getElementsByClassName('value')[0].textContent);
-    if (direction) {
-        shift = 26 - shift;
-    }
-    console.log(shift);
-});
+};
 
 /*
 
