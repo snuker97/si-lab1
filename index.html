@@ -16,7 +16,7 @@
     <div class="container">
         <a class="waves-effect waves-light btn-large col s2 offset-s2">Criptul lui Cesar</a>
         <a class="waves-effect waves-light btn-large col s2">Al doilea algoritm</a>
-        <a class="waves-effect waves-light btn-large col s2">Criptul lui Cesar</a>
+        <a class="waves-effect waves-light btn-large col s2">Criptul lui Vernam</a>
         <a class="waves-effect waves-light btn-large col s2">Criptul lui Cesar</a>
     </div>
 </div>
@@ -82,6 +82,31 @@
     </div>
 </div>
 
+<div id="vernam">
+    <div class="container">
+        <div class="row">
+            <div class="input-field col s8 offset-s2">
+                <input id="user-text2" type="text" class="validate" style="text-transform: uppercase">
+                <label for="user-text2">Introduceti mesajul pe care doriti sa-l criptati</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s8 offset-s2">
+                <input disabled value="" id="disabled2" type="text" class="validate">
+                <label for="disabled">Mesajul cheie generat aleatoriu</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s8 offset-s2">
+                <input disabled value="" id="disabled2-1" type="text" class="validate">
+                <label for="disabled">Mesajul criptat</label>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -103,6 +128,10 @@
     let second = document.createElement('SCRIPT');
     second.src = 'js/second.js';
     document.getElementsByTagName('body')[0].appendChild(second);
+
+    let cifrulLuiVernam = document.createElement('SCRIPT');
+    cifrulLuiVernam.src = 'js/cifrulLuiVernam.js';
+    document.getElementsByTagName('body')[0].appendChild(cifrulLuiVernam);
 </script>
 
 <!-- Crypt -->
